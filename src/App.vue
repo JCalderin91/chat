@@ -37,7 +37,13 @@ main {
   background-color: #e9e9e9;
   border-radius: 0.4rem;
   aside {
-    background-color: #258888;
+    background: rgb(0, 31, 51);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 31, 51, 1) 0%,
+      rgb(15, 124, 128) 37%,
+      rgb(10, 150, 160) 100%
+    );
     border-radius: 0.4rem;
     .header {
       padding: 1rem;
