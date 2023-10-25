@@ -10,9 +10,18 @@ import ChatForm from "@/components/molecules/ChatForm.vue";
     <aside>
       <div class="header">
         <div class="app-name">Chat</div>
+        <div class="actions">
+          <button class="action primary">
+            <font-awesome-icon icon="fa-plus" />
+          </button>
+          <button class="action">
+            <font-awesome-icon icon="fa-ellipsis-vertical" />
+          </button>
+        </div>
       </div>
       <div class="contacts">
         <div class="search">
+          <font-awesome-icon class="icon-search" icon="fa-magnifying-glass" />
           <input type="text" placeholder="Search here..." />
         </div>
         <ContactList />
@@ -47,22 +56,51 @@ main {
     border-radius: 0.4rem;
     .header {
       padding: 1rem;
+      display: flex;
+      justify-content: space-between;
       .app-name {
         font-size: 1.4rem;
         font-weight: 600;
       }
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+        .action {
+          border: none;
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          color: white;
+          background-color: transparent;
+          &.primary {
+            background-color: var(--primary-color);
+          }
+        }
+      }
     }
     .search {
-      padding: 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem;
+      position: relative;
+      .icon-search {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
       input {
         width: 100%;
-        padding: 0.8rem 1rem;
+        padding: 0.8rem 1rem 0.8rem 2.8rem;
         border-radius: 0.3rem;
         background-color: #3cc4c4;
         color: #333;
         border: none;
         outline: none;
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: 600;
+        }
       }
     }
   }
