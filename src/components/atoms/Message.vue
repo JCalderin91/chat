@@ -20,7 +20,7 @@ defineProps({
     text-align: right;
     align-self: flex-end;
     .message {
-      background-color: #1d5488;
+      background-color: #0c7477;
       border-radius: 0.6rem 0.6rem 0 0.6rem;
     }
   }
