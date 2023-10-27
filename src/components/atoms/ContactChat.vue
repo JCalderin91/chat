@@ -7,13 +7,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="contact">
+  <article class="contact">
     <UserPicture />
     <div class="contact-info">
       <h6 class="name">{{ name }}</h6>
       <small class="resume">{{ resume }}</small>
+      <div class="counter">1</div>
     </div>
-  </div>
+  </article>
 </template>
 
 <style lang="scss" scoped>
@@ -22,10 +23,13 @@ defineProps({
   gap: 0.5rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
   &:hover {
     background-color: #ffffff21;
   }
   .contact-info {
+    position: relative;
+    flex: 1;
     .name {
       font-size: 1rem;
       line-height: 1.1;
@@ -37,6 +41,22 @@ defineProps({
       color: #cacaca;
       padding: 0;
       margin: 0;
+    }
+    .counter {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #333;
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
     }
   }
 }

@@ -1,3 +1,7 @@
+<script setup>
+import IconButton from "@/components/atoms/IconButton.vue";
+</script>
+
 <template>
   <section class="header">
     <div class="user-name">
@@ -5,12 +9,8 @@
       <div class="name">Elizabeth Nelson</div>
     </div>
     <div class="actions">
-      <button class="action">
-        <font-awesome-icon icon="fa-phone" />
-      </button>
-      <button class="action">
-        <font-awesome-icon icon="fa-video" />
-      </button>
+      <IconButton color="primary" icon="fa-phone" />
+      <IconButton color="primary" icon="fa-video" />
     </div>
   </section>
 </template>
@@ -21,6 +21,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  z-index: 1;
+  box-shadow: 0px 0px 20px 5px #afafaf8c;
   .user-name {
     display: flex;
     align-items: center;
@@ -41,16 +43,6 @@
   .actions {
     display: flex;
     gap: 0.5rem;
-    .action {
-      border: none;
-      height: 35px;
-      width: 35px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background-color: var(--primary-color);
-      color: white;
-    }
   }
 }
 </style>

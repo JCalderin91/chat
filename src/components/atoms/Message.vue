@@ -32,6 +32,7 @@ defineProps({
   &.me {
     text-align: right;
     align-self: flex-end;
+    flex-direction: row-reverse;
     .message {
       background-color: rgba(0, 31, 51, 1);
       border-radius: 0.6rem 0.6rem 0 0.6rem;
@@ -44,6 +45,7 @@ defineProps({
     background-color: #777777;
     color: white;
     margin-bottom: 2.5rem;
+    z-index: 2;
   }
   small {
     font-size: 0.6rem;

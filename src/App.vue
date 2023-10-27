@@ -3,6 +3,7 @@ import ContactList from "@/components/organisms/ContactList.vue";
 import ChatBody from "@/components/molecules/ChatBody.vue";
 import ChatHeader from "@/components/molecules/ChatHeader.vue";
 import ChatForm from "@/components/molecules/ChatForm.vue";
+import IconButton from "@/components/atoms/IconButton.vue";
 </script>
 
 <template>
@@ -11,12 +12,8 @@ import ChatForm from "@/components/molecules/ChatForm.vue";
       <div class="header">
         <div class="app-name">Chat</div>
         <div class="actions">
-          <button class="action primary">
-            <font-awesome-icon icon="fa-plus" />
-          </button>
-          <button class="action">
-            <font-awesome-icon icon="fa-ellipsis-vertical" />
-          </button>
+          <IconButton color="primary" icon="fa-plus" />
+          <IconButton icon="fa-ellipsis-vertical" />
         </div>
       </div>
       <div class="contacts">
@@ -65,19 +62,6 @@ main {
       .actions {
         display: flex;
         gap: 0.5rem;
-        .action {
-          border: none;
-          height: 35px;
-          width: 35px;
-          border-radius: 50%;
-          display: grid;
-          place-items: center;
-          color: white;
-          background-color: transparent;
-          &.primary {
-            background-color: var(--primary-color);
-          }
-        }
       }
     }
     .search {
